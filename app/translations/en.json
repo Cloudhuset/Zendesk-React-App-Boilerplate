@@ -1,0 +1,6 @@
+{
+  "app": {
+    "description": "Sample app for Zendesk App Framework V2, using React and redux",
+    "name": "Kristelig Dagblad - Infosoft"
+  }
+}
