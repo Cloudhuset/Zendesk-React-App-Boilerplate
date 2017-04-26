@@ -12,12 +12,12 @@
 ## How to use it
 Start by cloning this repository with `git clone https://github.com/Cloudhuset/Zendesk-React-App-Boilerplate.git`
 
-**From the root folder you can run the following commands:**
-Run `npm install` to install node modules
-Run `npm run dev` to compile and watch src files for changes
+**From the root folder you can run the following commands:**  
+Run `npm install` to install node modules  
+Run `npm run dev` to compile and watch src files for changes  
 Run `npm run prod` to compile for production. This will minify/uglify your build so it's ready for packaging.
 
-**App folder:**
+**App folder:**  
 The app/ folder is where your Zendesk app lives. From in here you will run the ZAT (Zendesk App Tool) commands, to package the app, run development server, etc. Please read the Zendesk documentation if you have questions regarding the structure of this folder, and other things regarding the app framework.
 
 ## Do you have any ideas?
