@@ -3,7 +3,6 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import CSSModules from 'react-css-modules'
 import { getClients, setAppHeight, changePage, openClient } from '../../actions'
-import CopyToClipboard from 'react-copy-to-clipboard'
 import styles from './style.css'
 
 @connect(
