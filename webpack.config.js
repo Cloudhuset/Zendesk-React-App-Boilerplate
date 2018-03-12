@@ -30,11 +30,14 @@ module.exports = {
         path: dir_build,
         filename: 'bundle.js'
     },
+    resolve: {
+        extensions: ['', '.js', '.jsx'],
+    },
     module: {
         loaders: [
             {
                 loader: 'babel-loader',
-                test: dir_js,
+                test: /\.(js|jsx)$/,
                 query: {
                     plugins: ['transform-decorators-legacy', 'transform-object-rest-spread'],
                     presets: ['es2015', 'react'],

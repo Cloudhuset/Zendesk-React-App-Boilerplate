@@ -12,7 +12,7 @@ import { changePage, setAppHeight, saveRequesterEmailOnClient } from '../../acti
         setAppHeight,
     })
 )
-export default class OtherPage extends React.Component {
+export default class PageTwo extends React.Component {
 
     componentDidMount() {
         const height = document.getElementById('app').clientHeight
