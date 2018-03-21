@@ -1,3 +1,4 @@
+
 /* global __dirname */
 
 var path = require('path');
@@ -25,19 +26,22 @@ if(isProductionBuild) {
 }
 
 module.exports = {
-    entry: path.resolve(dir_js, 'app.js'),
+    entry: ['babel-polyfill', path.resolve(dir_js, 'app.js')],
     output: {
         path: dir_build,
         filename: 'bundle.js'
+    },
+    resolve: {
+        extensions: ['', '.js', '.jsx'],
     },
     module: {
         loaders: [
             {
                 loader: 'babel-loader',
-                test: dir_js,
+                test: /\.(js|jsx)$/,
                 query: {
-                    plugins: ['transform-decorators-legacy', 'transform-object-rest-spread'],
-                    presets: ['es2015', 'react'],
+                    plugins: ['transform-decorators-legacy', 'transform-object-rest-spread', 'transform-runtime'],
+                    presets: ['env', 'es2015', 'react','stage-0', 'stage-2']
                 },
             },
             { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]') },
