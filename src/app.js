@@ -1,23 +1,48 @@
-import React from "react";
-import { render } from 'react-dom';
-import { Provider } from 'react-redux'
-import { createStore, applyMiddleware, compose } from 'redux'
-import thunk from 'redux-thunk'
-import reducer from './reducer'
+import React from 'react';
+import PropTypes from 'prop-types';
+import './App.scss';
+import { connect } from 'react-redux';
 
-import Main from './containers/Main'
+function App(props) {
+  const { users } = props;
+  const { requester = {} } = users;
+  return (
+    <div className="App">
+      <header className="App-header">
+        <p className="Requester-name">Requesters name is {requester.name}.</p>
+      </header>
+      <footer className="app-footer">
+      <a
+          className="app-link"
+          href="https://cloudhuset.dk"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Made with&nbsp;
+          <span role="img" aria-label="Love">
+          ❤️
+          </span>
+          &nbsp;
+          and
+          &nbsp;
+          <span role="img" aria-label="Love">
+          ☕
+          </span>
+          &nbsp;by Cloudhuset
+        </a>
+    </footer>
+    </div>
+  );
+}
 
-const store = createStore(reducer,
-    compose(
-        applyMiddleware(
-            thunk,
-        ),
-        window.devToolsExtension ? window.devToolsExtension() : f => f,
-    )
-)
+App.propTypes = {
+  users: PropTypes.object,
+};
 
-render((
-    <Provider store={store}>
-        <Main/>
-    </Provider>
-), document.getElementById('app'));
+function mapStateToProps(state) {
+  return {
+    users: state.users,
+  };
+}
+
+export default connect(mapStateToProps)(App);
