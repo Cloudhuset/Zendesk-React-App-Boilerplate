@@ -5,8 +5,10 @@ export function getRequesterSuccess(requester) {
   return { type: types.GET_REQUESTER_SUCCESS, requester };
 }
 
-// Thunks.
-
+/**
+ * Get current tickets Requester via zafClient
+ * TODO: Add more examples
+ */
 export const getRequester = () => dispatch => {
   zafClient.get('ticket.requester').then(function(data) {
     const requester = data['ticket.requester'];
