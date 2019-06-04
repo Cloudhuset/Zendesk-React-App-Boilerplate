@@ -1,6 +1,7 @@
 /**
  * List of required files
  * Add files to the array below to check them.
+ * TODO: Add more tests
  */
 const files = [
   '../../dist/manifest.json',
