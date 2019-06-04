@@ -1,0 +1,36 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  position: absolute;
+  top: 0;
+  height: 80px;
+  pointer-events: none;
+}
+
+.Requester-name {
+  color: black;
+}
+
+.App-header {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+footer a {
+  color: black;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.App-link {
+  color: black;
+  position: absolute;
+  bottom: 0;
+}
