@@ -1,6 +1,8 @@
 import React from 'react'
 import './style.scss'
-import zafClient from '../../api/zafClient';
+import zafClient from '../../api/zafClient'
+import Footer from '../Footer'
+
 
 function App(props) {
   const [requester, setRequester] = React.useState(null)
@@ -18,26 +20,7 @@ function App(props) {
       <header className="App-header">
         <p className="Requester-name">Requesters name is {requester ? requester.name : ''}.</p>
       </header>
-      <footer className="app-footer">
-        <a
-          className="app-link"
-          href="https://cloudhuset.dk"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Made with&nbsp;
-          <span role="img" aria-label="Love">
-            ❤️
-          </span>
-          &nbsp;
-          and
-          &nbsp;
-          <span role="img" aria-label="Love">
-            ☕
-          </span>
-          &nbsp;by Cloudhuset
-        </a>
-      </footer>
+      <Footer />
     </div>
   )
 }
