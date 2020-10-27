@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.scss'
-import zafClient from '../../api/zafClient'
+import zafClient from '../../zafClient'
 import Footer from '../Footer'
 
 
