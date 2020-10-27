@@ -8,7 +8,7 @@
 		"build-dev": "webpack --config webpack.dev.js",
 		"package": "npm-run-all clean && zat package --path ./dist",
 		"build:package": "npm-run-all build package",
-		"watch": "webpack --config webpack.dev.js --watch",
+		"dev": "webpack --config webpack.dev.js --watch",
 		"serve": "zat server --path dist -c settings.json",
 		"test": "jest"
 	},

@@ -30,7 +30,7 @@ This command can be used to build to build the application to the `dist/` folder
 
 This command can be used to build to build the application to the `dist/` folder using the development env.
 
-#### yarn watch
+#### yarn dev
 
 This command watches for file changes and when a file is changed builds to the `dist/` folder using the development env.
 
