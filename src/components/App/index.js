@@ -3,17 +3,14 @@ import './style.scss'
 import zafClient from '../../zafClient'
 import Footer from '../Footer'
 
-
-function App(props) {
+const App = () => {
   const [requester, setRequester] = React.useState(null)
 
-  React.useEffect(() => {
-    zafClient.get('ticket.requester').then(function(data) {
-      const requester = data['ticket.requester']
-      setRequester(requester)
-    });
+  React.useEffect(async () => {
+    const data = await zafClient.get('ticket.requester')
+    const requester = data['ticket.requester']
+    setRequester(requester)
   }, [])
-  
 
   return (
     <div className="App">

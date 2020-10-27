@@ -4,13 +4,14 @@
 	"description": "Boilerplate for making a Zendesk App with React.js and Redux ",
 	"scripts": {
 		"clean": "rimraf dist/tmp",
-		"build": "webpack --config webpack.prod.js",
+		"build": "npm run lint && webpack --config webpack.prod.js",
 		"profile": "webpack --config webpack.prod.js --profile --json > webpack-stats.json",
 		"build-dev": "webpack --config webpack.dev.js",
 		"package": "npm-run-all clean && zat package --path ./dist",
 		"build:package": "npm-run-all build package",
 		"dev": "webpack --config webpack.dev.js --watch",
 		"serve": "zat server --path dist -c settings.json",
+		"lint": "eslint src/",
 		"test": "jest"
 	},
 	"author": "Cloudhuset.dk",

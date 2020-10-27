@@ -9,10 +9,12 @@
     "jest": true
   },
   "rules": {
+    "indent": ["error", 2],
     "no-undef": [ 1 ],
     "no-var": 1,
     "no-trailing-spaces": 1,
     "no-unused-vars": 1,
+    "semi": ["error", "never"],
     "comma-dangle": ["error", "always-multiline"],
     "jsx-quotes": 1,
     "react/display-name": [1, { "ignoreTranspilerName": false }],
@@ -44,5 +46,10 @@
     "react/react-in-jsx-scope": 1,
     "react/self-closing-comp": 1,
     "react/sort-comp": 1
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
