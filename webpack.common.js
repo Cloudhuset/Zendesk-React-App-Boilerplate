@@ -30,12 +30,6 @@ module.exports = {
           {
             loader: "sass-loader", // Compiles Sass to CSS.
             options: {
-              sassOptions: {
-                includePaths: [
-                  "./src/styles/common", // Allows for import from this folder without specifying path.
-                ],
-              },
-
               sourceMap: true,
             },
           },

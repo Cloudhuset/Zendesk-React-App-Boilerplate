@@ -3,15 +3,12 @@
 ## Includes
 
 * React
-* Redux
-* Redux Thunk
 * Webpack
 * Babel
 * SASS compiler
 * CSS modules
 * Jest
 * zafClient
-* ZAT Commands (We include some commands that require you install [ZAT](https://developer.zendesk.com/apps/docs/developer-guide/zat) )
 
 ## How to use it
 
