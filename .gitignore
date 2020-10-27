@@ -5,6 +5,8 @@ node_modules
 dist/tmp/
 dist/assets/*.html
 dist/assets/bundle.js
+dist/assets/bundle.js.LICENSE.txt
+webpack-stats.json
 
 # Yarn.
 yarn-error.log
