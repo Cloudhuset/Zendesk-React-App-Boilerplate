@@ -8,7 +8,6 @@ const Component = () => {
         className="app-link"
         href="https://cloudhuset.dk"
         target="_blank"
-        rel="noopener noreferrer"
       >
         Made with&nbsp;
         <span role="img" aria-label="Love">

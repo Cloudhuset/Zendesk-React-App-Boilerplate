@@ -7,6 +7,8 @@ const App = () => {
   const [requester, setRequester] = React.useState(null)
 
   React.useEffect(async () => {
+    zafClient.invoke('resize', { height: '75px' })
+
     const data = await zafClient.get('ticket.requester')
     const requester = data['ticket.requester']
     setRequester(requester)
@@ -14,9 +16,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <p className="Requester-name">Requesters name is {requester ? requester.name : ''}.</p>
-      </header>
+      <p className="Requester-name">Requesters name is {requester ? requester.name : ''}.</p>
       <Footer />
     </div>
   )
