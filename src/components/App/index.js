@@ -1,18 +1,25 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './App.scss';
-import { connect } from 'react-redux';
+import React from 'react'
+import './style.scss'
+import zafClient from '../../api/zafClient';
 
 function App(props) {
-  const { users } = props;
-  const { requester = {} } = users;
+  const [requester, setRequester] = React.useState(null)
+
+  React.useEffect(() => {
+    zafClient.get('ticket.requester').then(function(data) {
+      const requester = data['ticket.requester']
+      setRequester(requester)
+    });
+  }, [])
+  
+
   return (
     <div className="App">
       <header className="App-header">
-        <p className="Requester-name">Requesters name is {requester.name}.</p>
+        <p className="Requester-name">Requesters name is {requester ? requester.name : ''}.</p>
       </header>
       <footer className="app-footer">
-      <a
+        <a
           className="app-link"
           href="https://cloudhuset.dk"
           target="_blank"
@@ -20,29 +27,19 @@ function App(props) {
         >
           Made with&nbsp;
           <span role="img" aria-label="Love">
-          ❤️
+            ❤️
           </span>
           &nbsp;
           and
           &nbsp;
           <span role="img" aria-label="Love">
-          ☕
+            ☕
           </span>
           &nbsp;by Cloudhuset
         </a>
-    </footer>
+      </footer>
     </div>
-  );
+  )
 }
 
-App.propTypes = {
-  users: PropTypes.object,
-};
-
-function mapStateToProps(state) {
-  return {
-    users: state.users,
-  };
-}
-
-export default connect(mapStateToProps)(App);
+export default App

@@ -1,2 +1,0 @@
-// Users.
-export const GET_REQUESTER_SUCCESS = 'GET_REQUESTER_SUCCESS';
