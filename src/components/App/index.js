@@ -16,7 +16,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <p className="Requester-name">Requesters name is {requester ? requester.name : ''}.</p>
+      <p className="Requester-name">
+        Requesters name is {requester ? requester.name : ''}.
+      </p>
       <Footer />
     </div>
   )

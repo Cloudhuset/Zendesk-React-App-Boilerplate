@@ -4,8 +4,7 @@ node_modules
 # Build files.
 dist/tmp/
 dist/assets/*.html
-dist/assets/bundle.js
-dist/assets/bundle.js.LICENSE.txt
+dist/assets/app.bundle.js
 webpack-stats.json
 
 # Yarn.

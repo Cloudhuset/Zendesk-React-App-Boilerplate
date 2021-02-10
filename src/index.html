@@ -4,18 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Cloudhuset Zendesk App</title>
-    <!-- Zendesk Client Lib -->
     <script src="https://static.zdassets.com/zendesk_app_framework_sdk/2.0/zaf_sdk.min.js"></script>
-    <script>
-        var routeTo = "<%= htmlWebpackPlugin.options.routeTo %>";
-        if (routeTo) {
-          window.routeTo = routeTo;
-        }
-        var appLocation = "<%= htmlWebpackPlugin.options.appLocation %>";
-        if (appLocation) {
-          window.appLocation = appLocation;
-        }
-      </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
