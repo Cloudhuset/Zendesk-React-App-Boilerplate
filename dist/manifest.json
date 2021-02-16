@@ -1,8 +1,8 @@
 {
   "name": "Zendesk React App Boilerplate",
   "author": {
-    "name": "Mathias V. Nielsen",
-    "email": "mn@cloudhuset.dk",
+    "name": "Cloudhuset",
+    "email": "info@cloudhuset.dk",
     "url": "https://cloudhuset.dk"
   },
   "defaultLocale": "en",
