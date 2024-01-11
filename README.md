@@ -42,9 +42,9 @@ This command uses npm-run-all to run both the `yarn build` and the `yarn package
 
 #### yarn serve
 
-This command uses [ZAT](https://developer.zendesk.com/apps/docs/developer-guide/zat) to serve the content to your Zendesk directly from your computer
+This command uses [ZCLI](https://developer.zendesk.com/documentation/apps/getting-started/using-zcli/) to serve the content to your Zendesk directly from your computer
 
-Read more about ZAT Here: <https://developer.zendesk.com/apps/docs/developer-guide/zat>
+Read more about ZCLI Here: <https://developer.zendesk.com/documentation/apps/getting-started/using-zcli/>
 
 #### yarn clean
 
